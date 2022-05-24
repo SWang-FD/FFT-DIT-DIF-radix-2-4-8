@@ -55,11 +55,11 @@ $$
 F[2r+1]=\sum_{n=0}^{\dfrac{N}{2}-1}W_\dfrac{N}{2}^{r,n}\times e^{-j\dfrac{2\pi}{N}n}(x[n]-x[n+\dfrac{N}{2}])=FFT(W_N^n(x[n]-x[n+\dfrac{N}{2}]))
 $$
 
-![image-20220524094910020](https://raw.githubusercontent.com/SWang-FD/Picture-for-Typora/main/img/202205240949093.png?token=ARMJFALTC23NNT2B5BOOA43CRQ45S)
+![image-20220524094910020](https://github.com/SWang-FD/Picture-for-Typora/main/img/202205240949093.png?token=ARMJFALTC23NNT2B5BOOA43CRQ45S)
 
 ### 1.2 时域抽取基2FFT
 
-![image-20220524095207783](https://raw.githubusercontent.com/SWang-FD/Picture-for-Typora/main/img/202205240952815.png?token=ARMJFAPPEX65ZONTX3V3C23CRQ5II)
+![image-20220524095207783](https://github.com/SWang-FD/Picture-for-Typora/main/img/202205240952815.png?token=ARMJFAPPEX65ZONTX3V3C23CRQ5II)
 
 #### 1.2.1 蝶形运算实现DIT基2FFT
 
@@ -97,7 +97,7 @@ $$
 
 + N点FFT，按时间抽取，**蝶形运算**：
 
-  ![img](https://raw.githubusercontent.com/SWang-FD/Picture-for-Typora/main/img/202205240953639.png?token=ARMJFAOFLZ4V6MAL2EPN5MDCRQ5MK)
+  ![img](https://github.com/SWang-FD/Picture-for-Typora/main/img/202205240953639.png?token=ARMJFAOFLZ4V6MAL2EPN5MDCRQ5MK)
 
 我们把输入序列$x[n]$的序号用$D=log_2N$比特整数表示，然后，我们把第$i$个元素和第$reverseBit(i)$个元素调换位置。
 
@@ -120,11 +120,11 @@ $$
 
 ## 2. 基4FFT
 
-![image-20220524095440235](https://raw.githubusercontent.com/SWang-FD/Picture-for-Typora/main/img/202205240954305.png?token=ARMJFAOCGBMAXQBJRYJOKITCRQ5R2)
+![image-20220524095440235](https://github.com/SWang-FD/Picture-for-Typora/main/img/202205240954305.png?token=ARMJFAOCGBMAXQBJRYJOKITCRQ5R2)
 
-![image-20220524101235560](https://raw.githubusercontent.com/SWang-FD/Picture-for-Typora/main/img/202205241012615.png?token=ARMJFAISJ7CPV77ZKMFOXFDCRQ7VA)
+![image-20220524101235560](https://github.com/SWang-FD/Picture-for-Typora/main/img/202205241012615.png?token=ARMJFAISJ7CPV77ZKMFOXFDCRQ7VA)
 
-![7241055-058837b165f2cf1b](https://raw.githubusercontent.com/SWang-FD/Picture-for-Typora/main/img/202205241027871.png?token=ARMJFALU5PMJCMO672BYQ4DCRRBLO)
+![7241055-058837b165f2cf1b](https://github.com/SWang-FD/Picture-for-Typora/main/img/202205241027871.png?token=ARMJFALU5PMJCMO672BYQ4DCRRBLO)
 
 $reverseBit(i)$排序规则，每两个bit为一组，将各组位置倒序排列，对于长度为16的FFT，bitwidth = 4，例如：$6=0110_2$，将LST的两个bit $10_2$和MST的两个bit $01_2$交换位置，即$1001_2=9$。
 
@@ -132,8 +132,8 @@ $reverseBit(i)$排序规则，每两个bit为一组，将各组位置倒序排�
 
 ## 3. 基8 FFT
 
-![image-20220524102854416](https://raw.githubusercontent.com/SWang-FD/Picture-for-Typora/main/img/202205241028477.png?token=ARMJFALOLXABVV3W5PK4OCLCRRBSG)
+![image-20220524102854416](https://github.com/SWang-FD/Picture-for-Typora/main/img/202205241028477.png?token=ARMJFALOLXABVV3W5PK4OCLCRRBSG)
 
-![image-20220524102920138](https://raw.githubusercontent.com/SWang-FD/Picture-for-Typora/main/img/202205241029184.png?token=ARMJFAKYJHUJ4RRVYFKOFTTCRRBT2)
+![image-20220524102920138](https://github.com/SWang-FD/Picture-for-Typora/main/img/202205241029184.png?token=ARMJFAKYJHUJ4RRVYFKOFTTCRRBT2)
 
 $reverseBit(i)$排序规则，每三个bit为一组，将各组位置倒序排列，对于长度为64的FFT，bitwidth = 6，例如：$10=001010_2$，将LST的三个bit $010_2$和MST的三个bit $001_2$交换位置，即$010001_2=17$。
