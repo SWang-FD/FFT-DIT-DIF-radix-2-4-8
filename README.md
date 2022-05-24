@@ -31,13 +31,13 @@ $$
 
 分类讨论：
 
-+ 代入$k=2r$，根据性质$W_N^{2r,n}=W_\dfrac{N}{2}^{r,n}$有：
++ 代入 $k=2r$ ，根据性质 $W_N^{2r,n}=W_\dfrac{N}{2}^{r,n}$ 有：
 
 $$
 F[2r]=\sum_{n=0}^{\dfrac{N}{2}-1}W_\dfrac{N}{2}^{r,n}(x[n]+x[n+\dfrac{N}{2}])=FFT(x[n]+x[n+\dfrac{N}{2}])
 $$
 
-+ 代入$k=2r+1$，根据性质$W_N^{2r+1,n}=W_\dfrac{N}{2}^{r,n}\times e^{-j\dfrac{2\pi}{N}n}$有：
++ 代入 $k=2r+1$ ，根据性质 $W_N^{2r+1,n}=W_\dfrac{N}{2}^{r,n}\times e^{-j\dfrac{2\pi}{N}n}$ 有：
 
 $$
 F[2r+1]=\sum_{n=0}^{\dfrac{N}{2}-1}W_\dfrac{N}{2}^{r,n}\times e^{-j\dfrac{2\pi}{N}n}(x[n]-x[n+\dfrac{N}{2}])=FFT(W_N^n(x[n]-x[n+\dfrac{N}{2}]))
@@ -97,7 +97,7 @@ $reverseBit(i)$就是把$D$ bit整数的二进制位**倒序排列**，得到一
 
 **DIT**：对于不同的Radix，第$i,\quad i=0,1,2...$次迭代，有$groupNum=radix^{D-1-i}$个蝶形计算组，每个蝶形计算组有$groupSize=radix^i$个蝶算单元。
 
-**DIF**：对于不同的Radix，第$i, i=0,1,2...$次迭代，有$groupNum=radix^i$个蝶形计算组，每个蝶形计算组有$groupSize=radix^{D-1-i}$个蝶算单元。
+**DIF**：对于不同的Radix，第$i,\quad i=0,1,2...$次迭代，有$groupNum=radix^i$个蝶形计算组，每个蝶形计算组有$groupSize=radix^{D-1-i}$个蝶算单元。
 
 对于第$j,\quad j=0,1,2...$个蝶形计算组中的第$k,\quad k=0,1,2...$个蝶算单元，蝶算单元中第$m,\quad m=0,1,2...$个元素在（重新排序后的）输入数组中的坐标为
 
