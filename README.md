@@ -31,13 +31,13 @@ $$
 
 分类讨论：
 
-+ 代入 $k=2r$ ，根据性质 $W_N^{2r,n}=W_\dfrac{N}{2}^{r,n}$ 有：
++ 代入k=2r，根据性质$W_N^{2r,n}=W_\dfrac{N}{2}^{r,n}$有：
 
 $$
 F[2r]=\sum_{n=0}^{\dfrac{N}{2}-1}W_\dfrac{N}{2}^{r,n}(x[n]+x[n+\dfrac{N}{2}])=FFT(x[n]+x[n+\dfrac{N}{2}])
 $$
 
-+ 代入 $k=2r+1$ ，根据性质 $W_N^{2r+1,n}=W_\dfrac{N}{2}^{r,n}\times e^{-j\dfrac{2\pi}{N}n}$ 有：
++ 代入k=2r+1，根据性质$W_N^{2r+1,n}=W_\dfrac{N}{2}^{r,n}\times e^{-j\dfrac{2\pi}{N}n}$有：
 
 $$
 F[2r+1]=\sum_{n=0}^{\dfrac{N}{2}-1}W_\dfrac{N}{2}^{r,n}\times e^{-j\dfrac{2\pi}{N}n}(x[n]-x[n+\dfrac{N}{2}])=FFT(W_N^n(x[n]-x[n+\dfrac{N}{2}]))
