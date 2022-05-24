@@ -55,7 +55,7 @@ $$
 F[2r+1]=\sum_{n=0}^{\dfrac{N}{2}-1}W_\dfrac{N}{2}^{r,n}\times e^{-j\dfrac{2\pi}{N}n}(x[n]-x[n+\dfrac{N}{2}])=FFT(W_N^n(x[n]-x[n+\dfrac{N}{2}]))
 $$
 
-![image-20220524094910020](https://github.com/SWang-FD/Picture-for-Typora/main/img/202205240949093.png?token=ARMJFALTC23NNT2B5BOOA43CRQ45S)
+![image-20220524094910020](https://github.com/SWang-FD/Picture-for-Typora/main/img/202205240949093.png)
 
 ### 1.2 时域抽取基2FFT
 
