@@ -173,7 +173,7 @@ int fft(
         iOrder = (fftType == DIF) ? reverseBit(i) : i;
         if(IFFT){
             output[iOrder].re = butterfly[i].re / fftLength;
-    	    output[iOrder].im = butterfly[i].im / fftLength;
+    	    output[iOrder].im = -butterfly[i].im / fftLength;
         }else{
             output[iOrder] = butterfly[i];
         }
